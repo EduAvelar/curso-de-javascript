@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paises</title>
+    <style>
+        body{
+            font: normal 16px Arial;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+
+    Digite o nome do seu país: <input type="text" name="pais" id="pais">
+    <br> <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+
+    <h2>Idade</h2>
+
+    Digite sua idade: <input type="number" name="idade" id="txtidade">
+    <br> <input type="button" value="Verifica idade" onclick="idade()">
+    <div id="res_idade"></div>
+
+
+    <script>
+
+        function verificar(){
+
+            var pais = window.document.getElementById('pais').value
+            var res = window.document.getElementById('res')
+            
+
+            if(pais == 'brasil' || pais == 'Brasil'){
+                res.innerHTML += ` Voce é brasileiro `
+            }else{
+                res.innerHTML += ` Voce é estrangeiro `
+            }
+            
+            
+        }
+
+        function idade(){
+            var txt = document.getElementById('txtidade')
+            var valor = document.getElementById('res_idade')
+            var idade = Number(txt.value)
+            
+            if(idade < 18){
+                valor.innerHTML += ` Voce não tem idade para viajar `
+            }else{
+                valor.innerHTML += ` Voce tem idade para viajar `
+            }
+        }
+
+    </script>
+</body>
+</html>

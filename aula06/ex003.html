@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            background-color: rgb(142, 142, 187);
+            color: rgb(231, 162, 162);
+            margin: auto;
+            padding: 30px;
+        }
+        p{
+            font-size: 19px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: turquoise;
+        }
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+            color: thistle;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ola Mundo</h1>
+    <p>O de sempre, processo padrão</p>
+
+    <script>
+        var n1 = Number(window.prompt('digite um numero')) // uma forma de fazer a conversão para tipo de dado numerico
+        var n2 = window.prompt('digite outro numero')
+        var s = n1+Number(n2) // outra forma de fazer a conversão para tipo de dado numerico
+        alert(`A soma entre ${n1} e ${n2} é ${s} `)
+
+        // usando somente Number(n), ele reconhce se o numero é int ou float
+    </script>
+</body>
+</html>
