@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 10 - Eventos DOM</title>
     <style>
+        body{
+            background: grey;
+        }
         div#area{
             font: normal 20pt Arial;
             background: rgb(42, 139,42);
@@ -15,12 +18,33 @@
             text-align: center;
             margin: auto;
             padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px 20px;
+        }
+
+        div#area2{
+            border-radius: 20px 30px;
+            font: bold 15pt Arial;
+            background: rgb(116, 116, 223);
+            color: blanchedalmond;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+            height: 250px;
+            line-height: 250px;
+            text-align: center;
+            border: 1px solid black;
         }
     </style>
 </head>
 <body>
     <div id="area" >
         Interaja....
+    </div>
+
+    <div id="area2">
+        Segundo elemento div
     </div>
 
     <script>
@@ -42,6 +66,27 @@
         function sair(){
             a.innerText = 'saiu'
             a.style.background ='green'
+        }
+
+        var b = document.getElementById('area2')
+        b.addEventListener('click', sec_clicar)
+        b.addEventListener('mouseenter', sec_entrar)
+        b.addEventListener('mouseout', sec_sair)
+
+        function sec_clicar(){
+            b.innerText = 'div foi clicado'
+            b.style.background = '#701F13'
+            b.style.color = 'yellow'
+        }
+        function sec_entrar(){
+            b.innerText = 'entrou na segunda div'
+            b.style.background = '#00758B'
+            b.style.color= '#D91A2E'
+        }
+        function sec_sair(){
+            b.innerText = 'saindo da div'
+            b.style.background = '#CF7123'
+            b.style.color = '#5ED146'
         }
 
         
