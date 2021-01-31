@@ -7,21 +7,28 @@
 
     <style>
         body{
+            background: rgba(49, 49, 126, 0.562);
             font: normal 18pt Arial;
             margin: auto;
             padding: 20px;
         }
+        h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20pt;
+        }
         input{
             font: normal 18pt Arial;
             width: 100px;
-            
+            margin: auto;         
         }
         div#res{
             margin-top: 30px;
         }
-
         .somar{
             margin-top: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            border-radius: 2px;
         }
     </style>
 
@@ -30,9 +37,9 @@
     <h1>Somando Valores</h1>
     <input type="number" name="txtn1" id="txtn1"> + 
     <input type="number" name="txtn2" id="txtn2">
-    <br> <input class="somar" type="button" value="Somar" onclick="somar()"> 
+    <br> <input class="somar" type="button" value="Somar" onclick="somar()">     
     
-    <div id="res">Resultado</div>
+    <div id="res">Resultado:</div>
 
     <script>
         function somar(){
@@ -43,9 +50,7 @@
             var n2 = Number(tn2.value)
             var soma = n1 + n2
             
-            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong>`
-
-            
+            res.innerHTML += ` soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong>`
         }
     </script>
 </body>
