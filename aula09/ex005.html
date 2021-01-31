@@ -10,32 +10,78 @@
             color:white;
             font: normal 18pt Arial;
         }
+        h1{
+            background: hsl(22, 69%, 37%);
+        }
+        p#p0{
+            background: #47AD99;
+            border: 1px solid rgb(72, 72, 233);
+        }
+        div#msg2{
+            margin: 12px;
+        }
+        article.bloco{
+            border-radius: 3px 9px;
+            margin: 25px 98px 21px 23px;
+
+        }
+        article p{
+            margin: 3px 9px;
+        }
     </style>
 </head>
 <body>
+
     <h1>Iniciando estudos com DOM</h1>
-    <p>Aqui vai o resultado</p>
-    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
-    <div id="msg">Clique em mim</div>
+    <p id="p0">Aqui vai o resultado</p>
+    <p id="p1" >Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div id="msg1">Clique em mim</div>
+    <div id="msg2" >Outro texto</div>
+
+    <article class="bloco">
+        <p> qualquer coisa</p>
+    </article>
 
     <script>
+        //alteração do body através do javascript
         var corpo = window.document.body
+        corpo.style.background = "#3E3642"
+
+        
+        /*
+            declaração de variável e recebendo um elemento através da tag html que ele representa
+            por se tratar de duas tag's 'p' é usado os colchetes indicando o número que deseja receber, no caso recebeu a segunda tag 'p'
+            em seguida foi feita a alteração da cor de fundo da tag
+        */
         var p1= window.document.getElementsByTagName('p')[1]
+        p1.style.background = '#409DE6'
+        p1.style.color='blue'
+        p1.style.border='1px solid black'
+        
+        var d= window.document.getElementById('msg1')
+        d.style.background = '#7FB0A5'
+        d.style.border='2px solid #493FEB'
+        d.style.color = '#5D3B71'
+        d.innerText = 'estou aguardando'
 
-        /*
-            var d= window.document.getElementById('msg')
-            d.style.background='green'
-            d.innerText = 'estou aguardando'
-            window.document.getElementById('msg').innerText = 'ola terraquios'
-        */
+        var e = document.querySelector('div#msg2')
+        e.style.background = '#7D84C1'
+        e.style.border = '1px solid red'
+        e.innerText += ' mais textos'
 
-        /*
-            var d = window.document.getElementsByName('msg')[0]
-            d.innerText = 'ola'
-        */
+        var blc = document.querySelector('article.bloco')
+        blc.style.border = '1px solid black'
+        //blc.style.margin = '10px 15px'
+        blc.style.background ='#BFA7CC'
 
-        var d = window.document.querySelector('div#msg')
-        d.style.background = 'blue'
+
+
+
+        //window.document.getElementById('msg').innerText = 'ola terraquios'
+        //var d = window.document.getElementsById('msg1')
+        //d.innerText = 'ola'
+        //var d = window.document.querySelector('div#msg1')
+        
 
         
     </script>
