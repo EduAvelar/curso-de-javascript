@@ -37,11 +37,6 @@ switch(diaSem){
     break
 }
 
-
-
-
-
-
 /**
  * para o javascript os dias da semana funcionam da seguinte forma:
  * 0 = domingo
